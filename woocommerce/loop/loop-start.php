@@ -20,4 +20,4 @@ if ( ! defined( 'ABSPATH' ) ) {
 }
 ?>
 
-<div class="row" data-barba-prevent="all"><!-- End in loop-end.php -->
+<div class="grid grid-cols-2 gap-2 mb-4 md:grid-cols-3 lg:grid-cols-4 md:gap-6 grid-auto" data-barba-prevent="all"><!-- End in loop-end.php -->

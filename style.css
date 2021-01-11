@@ -184994,3 +184994,8 @@ html.has-scroll-dragging {
 body#tinymce{
   background:white!important;
 }
+
+
+.product img{
+  width:100%;
+}

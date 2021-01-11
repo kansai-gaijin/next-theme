@@ -25,14 +25,16 @@ if ( empty( $product ) || ! $product->is_visible() ) {
 }
 ?>
 
-<div class="grid grid-cols-2 gap-2 mb-4 md:grid-cols-3 lg:grid-cols-4 md:gap-4 grid-auto" data-barba-prevent="all">
-    <div <?php wc_product_class( 'card h-100 d-flex text-center', $product ); ?>>
+<div class="anim fade-up" data-barba-prevent="all" data-scroll>
+    <div <?php wc_product_class( 'text-center', $product ); ?>>
         <?php
 	/**
 	 * Hook: woocommerce_before_shop_loop_item.
 	 *
 	 * @hooked woocommerce_template_loop_product_link_open - 10
 	 */
+	do_action( 'woocommerce_shop_loop_item_title' );
+	
 	do_action( 'woocommerce_before_shop_loop_item' );
 
 	/**
@@ -51,7 +53,7 @@ if ( empty( $product ) || ! $product->is_visible() ) {
 	 *
 	 * @hooked woocommerce_template_loop_product_title - 10
 	 */
-	do_action( 'woocommerce_shop_loop_item_title' );
+	
 
 	/**
 	 * Hook: woocommerce_after_shop_loop_item_title.

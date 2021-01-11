@@ -21,7 +21,7 @@ if ( ! defined( 'ABSPATH' ) ) {
 
 ?>
 
-<div class="mb-4 col-md-6">
+<div class="flex justify-space-between items-center">
 
     <form class="woocommerce-ordering" method="get" data-barba-prevent="all">
         <select name="orderby" class="orderby custom-select" aria-label="<?php esc_attr_e( 'Shop order', 'bootscore' ); ?>">
