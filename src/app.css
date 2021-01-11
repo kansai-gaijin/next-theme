@@ -1,0 +1,435 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+
+.midashi1{
+  @apply text-3xl text-gray-900 font-bold leading-normal tracking-tight lg:text-7xl lg:leading-normal
+}
+.midashi2{
+  @apply font-bold text-gray-900 tracking-tight text-3xl leading-normal lg:text-6xl lg:leading-normal
+}
+.midashi3{
+  @apply text-xl font-bold tracking-tight text-gray-900 leading-normal lg:text-3xl lg:leading-normal
+}
+.midashi4{
+  @apply text-xl text-gray-900 font-bold tracking-tight leading-normal lg:text-4xl lg:leading-normal
+}
+.midashi5{
+  @apply text-base tracking-tight text-gray-900 leading-normal lg:text-xl lg:leading-normal
+}
+.midashi6{
+  @apply font-bold mb-3 text-base lg:text-lg
+}
+
+.midashi-page{
+  @apply text-gray-900 text-3xl font-bold tracking-tight leading-tight lg:text-7xl lg:leading-tight
+}
+p{
+  @apply text-sm text-gray-700 tracking-tight leading-loose lg:text-base lg:leading-loose
+}
+.arrow-circle{
+  @apply h-16 w-16 rounded-full flex bg-gray-900 text-white justify-center items-center border-3 transition hover:opacity-60
+}
+.btn-dark{
+  @apply group shadow-md text-white text-center bg-gray-900 font-bold tracking-tight rounded px-12 py-2 block relative transition hover:bg-gray-600
+}
+.btn-light{
+  @apply group shadow-md text-gray-900 text-center bg-yellow-500 font-bold tracking-tight rounded px-12 py-2 block relative transition hover:bg-yellow-600
+}
+.btn-icon{
+  @apply absolute right-4 top-1/2 text-sm transform -translate-y-1/2 transition group-hover:translate-x-1
+}
+.btn-wrapper{
+  @apply flex justify-center items-center
+}
+
+
+.tbl{
+ @apply w-full block text-sm lg:text-base leading-loose lg:table
+}
+.tbl-body{
+ @apply block lg:table-row-group
+}
+.tbl-row{
+ @apply border-b block lg:table-row
+}
+.tbl-th{
+ @apply text-left block p-1 lg:table-cell lg:p-3
+}
+.tbl-td{
+ @apply p-1 block lg:table-cell lg:p-3
+}
+
+
+ol{
+  @apply list-decimal pl-4 mb-4
+}
+ol li{
+  @apply ml-3 text-sm leading-normal lg:text-base lg:leading-loose text-gray-700
+}
+
+label{
+  @apply midashi6
+}
+input[type="text"],textarea,input[type="email"],input[type="tel"],input[type="number"].woocommerce form .form-row .input-text, .woocommerce-page form .form-row .input-text{
+  @apply shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none
+}
+
+.woocommerce-privacy-policy-text{
+  @apply p-3
+}
+.woocommerce-terms-and-conditions-wrapper{
+  @apply mb-4
+}
+.woocommerce{
+  @apply max-w-screen-xl mx-auto px-3 my-14 lg:my-16
+}
+/* custom non-Tailwind CSS */
+body{
+  background:#FFF;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+/* HAMBURGER MENU */
+
+.hamburger {
+  cursor: pointer;
+  width: 48px;
+  height: 48px;
+  transition: all 0.25s;
+}
+
+.hamburger__top-bun,
+.hamburger__bottom-bun {
+  content: "";
+  position: absolute;
+  width: 24px;
+  height: 2px;
+  background: white;
+  transform: rotate(0);
+  transition: all 0.5s;
+}
+
+.hamburger:hover [class*="-bun"] {
+  background: rgba(255, 255, 255, 0.6);
+}
+
+.hamburger__top-bun {
+  transform: translateY(-5px);
+}
+
+.hamburger__bottom-bun {
+  transform: translateY(3px);
+}
+
+.open {
+  transform: rotate(90deg);
+  transform: translateY(-1px);
+}
+
+.open .hamburger__top-bun {
+  transform: rotate(45deg) translateY(0px);
+}
+
+.open .hamburger__bottom-bun {
+  transform: rotate(-45deg) translateY(0px);
+}
+
+
+body {
+  overflow: hidden;
+  height: 100vh;
+  width: 100vw;
+}
+body.load-complete {
+  height: auto;
+  overflow-y: auto;
+}
+.pLoad {
+  position: fixed;
+  z-index: 3000;
+  cursor: wait;
+  overflow: hidden;
+}
+.pLoad,
+.pLoad_container {
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
+}
+.pLoad_container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: absolute;
+  background-color: #F8BE1F;
+}
+.pLoad_inner {
+  position: relative;
+  padding: 3rem;
+}
+.pLoad_inner_cover {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
+  background-color: #F8BE1F;
+  transform: scaleX(0);
+  transform-origin: left;
+  z-index: 20;
+}
+.pLoad_logo_inner {
+  display: inline-block;
+  overflow: hidden;
+  transform: translate3d(-100.5%, 0, 0);
+}
+.pLoad_logo_cover {
+  display: inline-block;
+  transform: translate3d(100.5%, 0, 0);
+}
+.pLoad_logo_img {
+  width: 24.6rem;
+  height: 2.94rem;
+}
+.pLoad_copy {
+  position: relative;
+  padding-bottom: 1rem;
+}
+.pLoad_copy_line {
+  position: relative;
+  margin-bottom: 2.5rem;
+}
+.pLoad_copy_text {
+  display: block;
+  width: 100%;
+  transform: translate3d(-100.5%, 0, 0);
+  overflow: hidden;
+}
+.pLoad_copy_text_inner {
+  width: 100%;
+  transform: translate3d(100.5%, 0, 0);
+  overflow: hidden;
+}
+.pLoad_copy_text.-back {
+  opacity: 0.5;
+}
+.pLoad_copy_text.-front {
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: 10;
+}
+.pLoad_copy_text_i.-text01 {
+  width: 54.7rem;
+  height: 7.1rem;
+}
+.pLoad_copy_text_i.-text02 {
+  width: 47.5rem;
+  height: 7.1rem;
+}
+@media screen and (max-width: 767px) {
+  .pLoad_logo_img {
+    width: 184.5px;
+    height: 22.05px;
+  }
+  .pLoad_copy {
+    padding-bottom: 0;
+  }
+  .pLoad_copy_line {
+    margin-bottom: 15px;
+  }
+  .pLoad_copy_text_i.-text01 {
+    width: 273.5px;
+    height: 35.5px;
+  }
+  .pLoad_copy_text_i.-text02 {
+    width: 237.5px;
+    height: 35.5px;
+  }
+}
+
+
+
+.c-scrollbar{
+  z-index:9999;
+}
+.site-wrapper{
+  overflow:hidden;
+  display:block;
+  max-width:100%;
+  min-height:100vh;
+}
+
+
+.geho::before {
+  content: "";
+  display: block;
+  height: 70px;
+}
+@media (min-width: 768px) {
+  .geho::before {
+    content: "";
+    display: block;
+    height: 88px;
+  }
+}
+.c-scrollbar {
+  position: fixed;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  z-index: 100000;
+  width: 1.1rem;
+  transition: opacity 0.3s, transform 0.4s cubic-bezier(0.645, 0.045, 0.355, 1);
+}
+ul {
+  list-style: none !important;
+}
+a {
+  text-decoration: none !important;
+}
+.service-slide {
+  padding: 20px 10px;
+}
+.service-slide img {
+  max-height: 250px !important;
+  width: 100% !important;
+  object-fit: cover !important;
+  object-position: top center;
+}
+#app ~ #app,
+#app > #app {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height:100vh;
+  z-index: 1;
+}
+
+
+/*! locomotive-scroll v3.6.1 | MIT License | https://github.com/locomotivemtl/locomotive-scroll */
+html.has-scroll-smooth {
+  overflow: hidden;
+}
+
+html.has-scroll-dragging {
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+}
+
+.has-scroll-smooth body {
+  overflow: hidden;
+}
+
+.has-scroll-smooth [data-scroll-container] {
+  min-height: 100vh;
+}
+
+.c-scrollbar {
+  position: absolute;
+  right: 0;
+  top: 0;
+  width: 11px;
+  height: 100%;
+  transform-origin: center right;
+  transition: transform 0.3s, opacity 0.3s;
+  opacity: 0;
+}
+.c-scrollbar:hover {
+  transform: scaleX(1.45);
+}
+.c-scrollbar:hover,
+.has-scroll-scrolling .c-scrollbar,
+.has-scroll-dragging .c-scrollbar {
+  opacity: 1;
+}
+
+.c-scrollbar_thumb {
+  position: absolute;
+  top: 0;
+  right: 0;
+  background-color: black;
+  opacity: 0.5;
+  width: 7px;
+  border-radius: 10px;
+  margin: 2px;
+  cursor: -webkit-grab;
+  cursor: grab;
+}
+.has-scroll-dragging .c-scrollbar_thumb {
+  cursor: -webkit-grabbing;
+  cursor: grabbing;
+}
+
+.anim{
+  opacity:0;
+  transition: all 0.5s ease-in-out;
+}
+.anim.start{
+  opacity:1;
+}
+.fade-up{
+  transform: translateY(40px)
+}
+.fade-up.start{
+  transform: translateY(0)
+}
+.fade-left{
+  transform: translateX(-10%)
+}
+.fade-left.start{
+  transform: translateX(0)
+}
+.line-text span{
+  max-width:0px;
+  transition:all 0.5s ease-in-out;
+  opacity:0;
+}
+.line-text.start span{
+  max-width:1000px;
+  opacity:1;
+}
+.line-text h3{
+   transition:all 0.5s ease-in-out 0.4s;
+  transform: translateX(-100%);
+  opacity:0;
+}
+.line-text.start h3{
+  transform: translateX(0);
+  opacity:1;
+}
+.anim.plan figure img{
+  transform: scale(0);
+  transform-origin:left;
+  transition:0.5s ease-in-out;
+}
+.anim.plan.start figure img{
+   transform: scale(1);
+}
+.anim.plan h3{
+  transform: translateY(20px);
+    opacity:0;
+  transition:0.5s ease-in-out;
+}
+.anim.plan.start h3{
+  transform: translateY(0);
+    opacity:1;
+}
+.anim.plan .bg-gray-900{
+  transform: translateY(20px) translateX(-40px);
+  opacity:0;
+  transition:0.5s ease-in-out;
+}
+.anim.plan.start .bg-gray-900{
+  transform: translateY(0) translateX(0);
+  opacity:1;
+}

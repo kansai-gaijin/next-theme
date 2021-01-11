@@ -1,0 +1,34 @@
+{
+  "name": "html5blankwptail",
+  "version": "1.0.0",
+  "description": "Tailwind Starter for Wordpress Based on html5blank for Wordpress",
+  "scripts": {
+    "dev": "npm run development",
+    "development": "cross-env NODE_ENV=development node_modules/webpack/bin/webpack.js --progress --hide-modules --config=node_modules/laravel-mix/setup/webpack.config.js",
+    "watch": "npm run development -- --watch",
+    "hot": "cross-env NODE_ENV=development node_modules/webpack-dev-server/bin/webpack-dev-server.js --inline --hot --config=node_modules/laravel-mix/setup/webpack.config.js",
+    "prod": "npm run production",
+    "production": "cross-env NODE_ENV=production node_modules/webpack/bin/webpack.js --no-progress --hide-modules --config=node_modules/laravel-mix/setup/webpack.config.js"
+  },
+  "author": "Ciaran",
+  "license": "ISC",
+  "devDependencies": {
+    "cross-env": "^7.0.2",
+    "laravel-mix": "^5.0.9",
+    "vue-template-compiler": "^2.6.12"
+  },
+  "dependencies": {
+    "@barba/core": "^2.9.7",
+    "@barba/prefetch": "^2.1.10",
+    "autoprefixer": "9",
+    "gsap": "^3.5.1",
+    "imagesloaded": "^4.1.4",
+    "jquery": "^3.5.1",
+    "locomotive-scroll": "^4.0.4",
+    "postcss": "7",
+    "postcss-flexbugs-fixes": "4",
+    "postcss-preset-env": "^6.7.0",
+    "slick-carousel": "^1.8.1",
+    "tailwindcss": "npm:@tailwindcss/postcss7-compat"
+  }
+}
